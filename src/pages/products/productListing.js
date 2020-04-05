@@ -1,21 +1,35 @@
 import React from 'react';
+import AddButton from './addButton';
+import RemoveButton from './removeButton';
 
 const ProductListing = (props) => {
-
-  //console.log('props ', props.products);
-  const data = props.products;
+  const product = props.products;
 
   return (
     <div className="product-details">
-      {data.images
-        ? data.images.map((image, index) => <img key={index} src="/" alt={image.name} />)
+      {product.images
+        ? product.images.map((image, index) => (
+            <img key={index} src="/" alt={image.name} />
+          ))
         : undefined}
-      <h3 className="product-title"> {data.name} </h3>
-      <div className="product-price"> ${data.price} </div>
-      <div className="product-description"> {data.description} </div>
+      <h3 className="product-title"> {product.name} </h3>
+      <div className="product-price"> ${product.price} </div>
+      <div className="product-description"> {product.description} </div>
       <div className="btn button">
-        {' '}
-        <button>Add to Cart</button>{' '}
+        <AddButton
+          cartItem={props.cartItem}
+          products={props.products}
+          addToCart={props.addToCart}
+        />
+        {
+          props.cartItem ? (
+            <RemoveButton
+          cartItem={props.cartItem}
+          removeFromCart={props.removeFromCart}
+        />
+          ): null
+        }
+        
       </div>
     </div>
   );
