@@ -17,7 +17,8 @@ const CartItems = (props) => {
         </tr>
       </thead>
       <tbody>
-        {sort(props.cart).map((item) => (
+        {/* {sort(props.cart).map((item) => ( */}
+        {props.cart.map((item) => (
           <tr>
             <td> {item.name} </td>
             <td> {item.quantity} </td>
@@ -60,13 +61,3 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(CartItems);
-
-// export const cartItemWithQuantities = (cartItems) => {
-//   return cartItems.reduce((acc, item) => {
-//     const filteredItem = acc.filter(item2 => item2.id === item.id)[0];
-//     filteredItem !== undefined
-//       ? filteredItem.quantity++
-//       : acc.push({...item, quantity: 1,});
-//     return acc
-//   }, []);
-// };

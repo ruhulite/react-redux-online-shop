@@ -1,11 +1,11 @@
 import React from 'react';
-import ProductListing from './productListing';
 import { connect } from 'react-redux';
-import { cartItemWithQuantities } from '../../features/cart';
+import ProductListing from './productListing';
+import { Row } from 'antd';
 
 const Products = (props) => {
   return (
-    <div>
+    <Row>
       {props.products.map((product, index) => (
         <ProductListing 
           key={index} products={product}
@@ -14,7 +14,7 @@ const Products = (props) => {
           cartItem={props.cart.filter(cartItem => cartItem.id === product.id)[0]}
         />
       ))}
-    </div>
+    </Row>
   );
 };
 

@@ -1,10 +1,11 @@
 import React from 'react';
+import { Button } from 'antd';
 
 const AddButton = (props) => {
   return (
-    <button onClick={() => props.addToCart(props.products)}>
+    <Button type="primary" onClick={() => props.addToCart(props.products)}>
       Add to Cart ({(props.cartItem && props.cartItem.quantity) || 0}){' '}
-    </button>
+    </Button>
   );
 };
 
