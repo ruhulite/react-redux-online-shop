@@ -1,37 +1,48 @@
 import React from 'react';
 import AddButton from './addButton';
 import RemoveButton from './removeButton';
+import {Row, Card, Col} from 'antd';
+import Meta from 'antd/lib/card/Meta';
 
 const ProductListing = (props) => {
   const product = props.products;
 
   return (
-    <div className="product-details">
-      {product.images
-        ? product.images.map((image, index) => (
-            <img key={index} src="/" alt={image.name} />
-          ))
-        : undefined}
-      <h3 className="product-title"> {product.name} </h3>
-      <div className="product-price"> ${product.price} </div>
-      <div className="product-description"> {product.description} </div>
-      <div className="btn button">
-        <AddButton
-          cartItem={props.cartItem}
-          products={props.products}
-          addToCart={props.addToCart}
-        />
-        {
-          props.cartItem ? (
-            <RemoveButton
-          cartItem={props.cartItem}
-          removeFromCart={props.removeFromCart}
-        />
-          ): null
-        }
-        
-      </div>
-    </div>
+    
+      <Col span={6}>
+        <Card
+          hoverable
+          style={{width: 240}}
+          cover={
+            product.images
+              ? product.images.map((image, index) => (
+                  <img
+                    key={index}
+                    alt={image.name}
+                    src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+                  />
+                ))
+              : undefined
+          }
+        >
+          <Meta title={product.name} description={product.description} />
+          <div className="product-price"> ${product.price} </div>
+          <div className="btn button">
+            <AddButton
+              cartItem={props.cartItem}
+              products={props.products}
+              addToCart={props.addToCart}
+            />
+            {props.cartItem ? (
+              <RemoveButton
+                cartItem={props.cartItem}
+                removeFromCart={props.removeFromCart}
+              />
+            ) : null}
+          </div>
+        </Card>
+      </Col>
+    
   );
 };
 

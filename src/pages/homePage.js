@@ -1,6 +1,6 @@
 import React from 'react';
-import Products from './products';
 import data from '../data/products.json';
+import Products from './products';
 
 const HomePage = (props) => {
   return (
