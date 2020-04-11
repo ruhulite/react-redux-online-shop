@@ -17,8 +17,7 @@ const CartItems = (props) => {
         </tr>
       </thead>
       <tbody>
-        {/* {sort(props.cart).map((item) => ( */}
-        {props.cart.map((item) => (
+        {sort(props.cart).map((item) => (
           <tr>
             <td> {item.name} </td>
             <td> {item.quantity} </td>

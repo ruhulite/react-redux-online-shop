@@ -183,6 +183,190 @@
           "stock_unlimited": true
         }
       ]
+    },
+    {
+      "id": 4,
+      "name": "Cotton Men's Fashionable Slim Fit Shirt",
+      "description": "Phosfluorescently integrate distinctive imperatives with sustainable e-business. Authoritatively iterate visionary outsourcing via excellent systems. Competently deploy top-line web services for enterprise information. Authoritatively plagiarize alternative deliverables for market-driven services. Dramatically communicate functional strategic theme areas without value-added solutions. Intrinsicly foster intermandated methodologies via error-free experiences.",
+      "price": 35,
+      "discount": 0,
+      "weight": 1,
+      "stock": 100,
+      "stock_unlimited": true,
+      "sku": 10,
+      "barcode": "kk22",
+      "google_product_category": "string",
+      "featured": false,
+      "status": "available",
+      "created_at": "string",
+      "package_format": "box",
+      "length": 0,
+      "width": 0,
+      "height": 0,
+      "diameter": 0,
+      "permalink": "white-cotton-mens-fashion-slim-fit-shirt",
+      "categories": [
+        {
+          "id": 0,
+          "name": "Cloth",
+          "parent_id": 0,
+          "permalink": "cloth"
+        }
+      ],
+      "images": [
+        {
+          "id": 0,
+          "position": 0,
+          "url": "string"
+        }
+      ],
+      "variants": [
+        {
+          "id": 0,
+          "price": 0,
+          "sku": "string",
+          "stock": 100,
+          "stock_unlimited": true
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Blue Cotton Men's Fashionable Slim Fit Shirt",
+      "description": "Progressively network fully tested mindshare after B2C experiences. Compellingly embrace mission-critical total linkage whereas standardized outside the box thinking. Interactively procrastinate user friendly infomediaries via frictionless mindshare. Enthusiastically drive client-based interfaces rather than backend sources. Competently synergize innovative scenarios rather than backend mindshare.",
+      "price": 40,
+      "discount": 0,
+      "weight": 1,
+      "stock": 100,
+      "stock_unlimited": true,
+      "sku": 22,
+      "barcode": "55gg",
+      "google_product_category": "string",
+      "featured": false,
+      "status": "available",
+      "created_at": "string",
+      "package_format": "box",
+      "length": 0,
+      "width": 0,
+      "height": 0,
+      "diameter": 0,
+      "permalink": "navy-blue-cotton-mens-fashion-slim-fit-shirt",
+      "categories": [
+        {
+          "id": 0,
+          "name": "Cloth",
+          "parent_id": 0,
+          "permalink": "cloth"
+        }
+      ],
+      "images": [
+        {
+          "id": 0,
+          "position": 0,
+          "url": "string"
+        }
+      ],
+      "variants": [
+        {
+          "id": 0,
+          "price": 0,
+          "sku": "string",
+          "stock": 100,
+          "stock_unlimited": true
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Men's Fashionable Slim Fit Shirt",
+      "description": "Phosfluorescently integrate distinctive imperatives with sustainable e-business. Authoritatively iterate visionary outsourcing via excellent systems. Competently deploy top-line web services for enterprise information. Authoritatively plagiarize alternative deliverables for market-driven services. Dramatically communicate functional strategic theme areas without value-added solutions. Intrinsicly foster intermandated methodologies via error-free experiences.",
+      "price": 35,
+      "discount": 0,
+      "weight": 1,
+      "stock": 100,
+      "stock_unlimited": true,
+      "sku": 10,
+      "barcode": "kk22",
+      "google_product_category": "string",
+      "featured": false,
+      "status": "available",
+      "created_at": "string",
+      "package_format": "box",
+      "length": 0,
+      "width": 0,
+      "height": 0,
+      "diameter": 0,
+      "permalink": "white-cotton-mens-fashion-slim-fit-shirt",
+      "categories": [
+        {
+          "id": 0,
+          "name": "Cloth",
+          "parent_id": 0,
+          "permalink": "cloth"
+        }
+      ],
+      "images": [
+        {
+          "id": 0,
+          "position": 0,
+          "url": "string"
+        }
+      ],
+      "variants": [
+        {
+          "id": 0,
+          "price": 0,
+          "sku": "string",
+          "stock": 100,
+          "stock_unlimited": true
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Cotton Men's Fashionable Slim Fit Shirt",
+      "description": "Progressively network fully tested mindshare after B2C experiences. Compellingly embrace mission-critical total linkage whereas standardized outside the box thinking. Interactively procrastinate user friendly infomediaries via frictionless mindshare. Enthusiastically drive client-based interfaces rather than backend sources. Competently synergize innovative scenarios rather than backend mindshare.",
+      "price": 40,
+      "discount": 0,
+      "weight": 1,
+      "stock": 100,
+      "stock_unlimited": true,
+      "sku": 22,
+      "barcode": "55gg",
+      "google_product_category": "string",
+      "featured": false,
+      "status": "available",
+      "created_at": "string",
+      "package_format": "box",
+      "length": 0,
+      "width": 0,
+      "height": 0,
+      "diameter": 0,
+      "permalink": "navy-blue-cotton-mens-fashion-slim-fit-shirt",
+      "categories": [
+        {
+          "id": 0,
+          "name": "Cloth",
+          "parent_id": 0,
+          "permalink": "cloth"
+        }
+      ],
+      "images": [
+        {
+          "id": 0,
+          "position": 0,
+          "url": "string"
+        }
+      ],
+      "variants": [
+        {
+          "id": 0,
+          "price": 0,
+          "sku": "string",
+          "stock": 100,
+          "stock_unlimited": true
+        }
+      ]
     }
   ]
 }
