@@ -1,7 +1,7 @@
 import React from 'react';
 import AddButton from './addButton';
 import RemoveButton from './removeButton';
-import {Row, Card, Col} from 'antd';
+import {Card, Col} from 'antd';
 import Meta from 'antd/lib/card/Meta';
 
 const ProductListing = (props) => {
