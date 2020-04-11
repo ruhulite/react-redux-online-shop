@@ -19,7 +19,7 @@ const ProductListing = (props) => {
                   <img
                     key={index}
                     alt={image.name}
-                    src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+                    src={image.url}
                   />
                 ))
               : undefined
