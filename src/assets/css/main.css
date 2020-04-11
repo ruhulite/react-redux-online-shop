@@ -20,3 +20,6 @@ code {
   max-width: 1200px;
   margin: 0 auto;
 }
+main.ant-layout-content {
+  margin-top: 64px;
+}

@@ -4,7 +4,7 @@ import {Layout, Row, Col} from 'antd';
 import Nav from './components/nav';
 import 'antd/dist/antd.css';
 
-const {Header, Footer, Content, Sider} = Layout;
+const {Header, Footer, Content} = Layout;
 
 function App() {
   return (
