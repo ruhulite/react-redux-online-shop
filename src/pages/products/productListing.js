@@ -25,8 +25,8 @@ const ProductListing = (props) => {
               : undefined
           }
         >
-          <Meta title={product.name} description={product.description} />
-          <div className="product-price"> ${product.price} </div>
+          <Meta title={product.name} description={product.short_description} />
+          <div className="product-price"> Price:  ${product.price} </div>
           <div className="btn button">
             <AddButton
               cartItem={props.cartItem}
