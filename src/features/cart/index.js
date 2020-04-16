@@ -1,13 +1,23 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import { Table, Tag } from 'antd';
-import { NavLink } from 'react-router-dom';
+import {Table} from 'antd';
+import {NavLink} from 'react-router-dom';
+import Image from '../../assets/images/girl.png';
 
 const sort = (items) => {
   return items.sort((a, b) => a.id < b.id);
 };
 
 const CartItems = (props) => {
+  const {cart} = props;
+
+  const subtotal = cart
+    ? cart.reduce(
+        (state, cartItem) => state + cartItem.quantity * cartItem.price,
+        0
+      )
+    : undefined;
+
   const handleClick = (item) => {
     if (item && parseInt(item.quantity) < 5) {
       props.addToCart(item);
@@ -19,38 +29,64 @@ const CartItems = (props) => {
       title: 'Image',
       dataIndex: 'image',
       key: 'image',
+      className: 'cart-product-image-thumb',
+      render: (image, item) => (
+        <NavLink to={item.permalink}>
+          <img alt={image} src={Image} />
+        </NavLink>
+      ),
     },
     {
       title: 'Name',
       dataIndex: 'name',
       key: 'name',
-      render: (name, item) => <NavLink to={item.permalink}>{name}</NavLink>,
+      render: (name, item) => (
+        <h3>
+          <NavLink to={item.permalink}>{name}</NavLink>
+        </h3>
+      ),
     },
     {
       title: 'Quantity',
       dataIndex: 'quantity',
       key: 'quantity',
+      render: (quantity, item) => (
+        <div>
+          <span>{quantity}</span>
+          <button onClick={() => handleClick(item)}>+</button>{' '}
+          <button onClick={() => props.removeFromCart(item)}>-</button>{' '}
+        </div>
+      ),
     },
     {
       title: 'Unit Price',
       dataIndex: 'price',
       key: 'price',
+      render: (price, item) => (
+        <p>
+          {item.quantity} * ${price}
+        </p>
+      ),
     },
     {
       title: 'Price',
       dataIndex: 'price',
       key: 'price',
+      render: (price, item) => <p>${item.quantity * price}</p>,
     },
   ];
 
-
   return (
     <>
-    {props.cart.length > 0 ? (
-    <Table pagination={false} columns={columns} dataSource={props.cart} />
-    ) : (
-      <div className="cart-has-no-item">You have no item in your Cart.</div>
-    )} 
+      {props.cart.length > 0 ? (
+        <Table pagination={false} columns={columns} dataSource={props.cart} />
+      ) : (
+        <div className="cart-has-no-item">You have no item in your Cart.</div>
+      )}
+
+      <div>
+        <h3 className="align-right">Subtotal: {subtotal}</h3>
+      </div>
       {/* {props.cart.length > 0 ? (
         <table>
           <thead>
