@@ -3,9 +3,12 @@ import AddButton from './addButton';
 import RemoveButton from './removeButton';
 import {Card, Col} from 'antd';
 import Meta from 'antd/lib/card/Meta';
+import Image from '../../assets/images/girl.png'
 
 const ProductListing = (props) => {
   const product = props.products;
+
+  //console.log('product.images ', product.images)
 
   return (
     
@@ -15,13 +18,13 @@ const ProductListing = (props) => {
           style={{width: 240}}
           cover={
             product.images
-              ? product.images.map((image, index) => (
+              ?  (
                   <img
-                    key={index}
-                    alt={image.name}
-                    src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+                    alt={product.images[0].name}
+                    //src={product.images[0].url}
+                    src={Image}
                   />
-                ))
+                )
               : undefined
           }
         >

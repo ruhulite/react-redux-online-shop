@@ -23,3 +23,10 @@ code {
 main.ant-layout-content {
   margin-top: 64px;
 }
+
+.cart-product-image-thumb img {
+  max-width: 76px;
+}
+.align-right {
+  text-align: right;
+}
