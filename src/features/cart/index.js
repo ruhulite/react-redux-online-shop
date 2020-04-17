@@ -9,6 +9,7 @@ const sort = (items) => {
 };
 
 const CartItems = (props) => {
+  console.log('props ', props)
   const {cart} = props;
 
   const subtotal = cart
@@ -18,13 +19,28 @@ const CartItems = (props) => {
       )
     : undefined;
 
-  const handleClick = (item) => {
+  const handleAddClick = (item) => {
     if (item && parseInt(item.quantity) < 5) {
       props.addToCart(item);
     }
   };
 
+  const handleRemoveClick = (item) => {
+    if (item && parseInt(item.quantity) > 1) {
+      props.removeFromCart(item)
+    }
+  };
+
   const columns = [
+    {
+      title: 'Remove',
+      dataIndex: '',
+      key: '',
+      className: 'cart-product-remove-item',
+      render: (image, item) => (
+        <button className="remove-icon" onClick={() => props.removeAllFromCart(item)}>X</button>
+      ),
+    },
     {
       title: 'Image',
       dataIndex: 'image',
@@ -51,10 +67,10 @@ const CartItems = (props) => {
       dataIndex: 'quantity',
       key: 'quantity',
       render: (quantity, item) => (
-        <div>
-          <span>{quantity}</span>
-          <button onClick={() => handleClick(item)}>+</button>{' '}
-          <button onClick={() => props.removeFromCart(item)}>-</button>{' '}
+        <div className="cart-item-quantity">
+          <span className="cart-item-quantity-number">{quantity}</span>
+          <span className="cart-item-add" onClick={() => handleAddClick(item)}>+</span>
+          <span className="cart-item-remove" onClick={() => handleRemoveClick(item)}>-</span>
         </div>
       ),
     },
@@ -84,8 +100,8 @@ const CartItems = (props) => {
         <div className="cart-has-no-item">You have no item in your Cart.</div>
       )}
 
-      <div>
-        <h3 className="align-right">Subtotal: {subtotal}</h3>
+      <div className="cart-subtotal">
+        <h3 className="align-right">Subtotal: ${subtotal}</h3>
       </div>
       {/* {props.cart.length > 0 ? (
         <table>

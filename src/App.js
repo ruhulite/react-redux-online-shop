@@ -27,7 +27,9 @@ function App() {
       </Content>
       <Footer>
       <Row>
-          <Col span={24}>Footer.....</Col>
+          <Col span={24}>
+            <h3 className="align-center">Site Footer</h3>
+          </Col>
         </Row>
       </Footer>
     </Layout>
