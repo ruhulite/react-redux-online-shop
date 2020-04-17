@@ -71,3 +71,6 @@ main.ant-layout-content {
   bottom: 0;
   top: auto;
 }
+.ant-col .ant-card {
+  margin-bottom: 30px;
+}

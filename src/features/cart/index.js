@@ -4,10 +4,6 @@ import {Table} from 'antd';
 import {NavLink} from 'react-router-dom';
 import Image from '../../assets/images/girl.png';
 
-const sort = (items) => {
-  return items.sort((a, b) => a.id < b.id);
-};
-
 const CartItems = (props) => {
   console.log('props ', props)
   const {cart} = props;
